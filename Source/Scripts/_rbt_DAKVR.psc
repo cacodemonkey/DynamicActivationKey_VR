@@ -6,6 +6,8 @@ int property MyDAKButton = 32 auto ; 32 = touchpad/thumbstick press
 
 Function Init()
     PapyrusVR.RegisterForVRButtonEvents(Self)
+	int MyVRKey = papyrusinimanipulator.PullIntFromIni("Data/DynamicActivationKeyVR_Config.ini", "config", "DAKVRKEY", 32)
+	SetDAKVRKey(MyVRKey)
 EndFunction
 
 Event OnInit()
